@@ -1,6 +1,6 @@
-﻿namespace SewingView
+﻿namespace CutingView
 {
-    partial class Form1
+    partial class Cuting
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Good = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,17 +35,9 @@
             this.Finish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Execute = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Заказ";
             // 
             // dataGridView1
             // 
@@ -58,10 +49,10 @@
             this.Finish,
             this.Status,
             this.Execute});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(641, 143);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabIndex = 1;
             // 
             // Name
             // 
@@ -99,15 +90,24 @@
             this.Execute.HeaderText = "Иполнитель";
             this.Execute.Name = "Execute";
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Заказ";
+            // 
+            // Cuting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 213);
+            this.ClientSize = new System.Drawing.Size(668, 209);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Швейная";
+            //this.Name = "Cuting";
+            this.Text = "Раскрой";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,8 +116,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Good;
         private System.Windows.Forms.DataGridViewTextBoxColumn End;

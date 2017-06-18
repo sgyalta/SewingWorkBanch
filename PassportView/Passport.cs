@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CutingView
+namespace PassportView
 {
-    public partial class Form1 : Form
+    public partial class Passport : Form
     {
-        public Form1()
+        public Passport()
         {
             InitializeComponent();
         }
