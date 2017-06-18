@@ -106,7 +106,7 @@
             this.ClientSize = new System.Drawing.Size(662, 201);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
+        //    this.Name = "Form1";
             this.Text = "Фурнитура";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
