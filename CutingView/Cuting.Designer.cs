@@ -36,6 +36,7 @@
             this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Execute = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,14 +100,24 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Заказ";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(262, 174);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 35);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Отправить дальше";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Cuting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 209);
+            this.ClientSize = new System.Drawing.Size(668, 216);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            //this.Name = "Cuting";
+            this.Name = "Cuting";
             this.Text = "Раскрой";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -124,6 +135,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Finish;
         private System.Windows.Forms.DataGridViewComboBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Execute;
+        private System.Windows.Forms.Button button1;
     }
 }
 
