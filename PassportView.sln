@@ -5,20 +5,6 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassportView", "PassportView\PassportView.csproj", "{14B2DA87-CC07-47B6-896A-A4A65EF2989E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutingView", "CutingView\CutingView.csproj", "{2BC9BBE4-A9B3-48EA-842B-0839E3C50E9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SewingView", "SewingView\SewingView.csproj", "{44468749-E6F2-4B41-9854-4382135A8A08}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FittingsView", "FittingsView\FittingsView.csproj", "{36AA12E4-199D-4367-B9C5-5CF1C514AC71}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualityСontrolView", "QualityСontrolView\QualityСontrolView.csproj", "{954BAD07-1A02-43B9-A437-97681FBB47A6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawMaterialsView", "RawMaterials\RawMaterialsView.csproj", "{69857B07-4EDC-4532-80AF-F2DBD1E4821F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StockView", "StockView", "{EC3E7F70-525E-4EBD-8997-880A53817438}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "TaskManager\TaskManager.csproj", "{0EE3CDE8-EE7B-4367-A199-F8449DAD944F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,35 +15,8 @@ Global
 		{14B2DA87-CC07-47B6-896A-A4A65EF2989E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B2DA87-CC07-47B6-896A-A4A65EF2989E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B2DA87-CC07-47B6-896A-A4A65EF2989E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BC9BBE4-A9B3-48EA-842B-0839E3C50E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BC9BBE4-A9B3-48EA-842B-0839E3C50E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BC9BBE4-A9B3-48EA-842B-0839E3C50E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BC9BBE4-A9B3-48EA-842B-0839E3C50E9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44468749-E6F2-4B41-9854-4382135A8A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44468749-E6F2-4B41-9854-4382135A8A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44468749-E6F2-4B41-9854-4382135A8A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44468749-E6F2-4B41-9854-4382135A8A08}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36AA12E4-199D-4367-B9C5-5CF1C514AC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36AA12E4-199D-4367-B9C5-5CF1C514AC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36AA12E4-199D-4367-B9C5-5CF1C514AC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36AA12E4-199D-4367-B9C5-5CF1C514AC71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{954BAD07-1A02-43B9-A437-97681FBB47A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{954BAD07-1A02-43B9-A437-97681FBB47A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{954BAD07-1A02-43B9-A437-97681FBB47A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{954BAD07-1A02-43B9-A437-97681FBB47A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69857B07-4EDC-4532-80AF-F2DBD1E4821F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69857B07-4EDC-4532-80AF-F2DBD1E4821F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69857B07-4EDC-4532-80AF-F2DBD1E4821F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69857B07-4EDC-4532-80AF-F2DBD1E4821F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EE3CDE8-EE7B-4367-A199-F8449DAD944F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EE3CDE8-EE7B-4367-A199-F8449DAD944F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EE3CDE8-EE7B-4367-A199-F8449DAD944F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EE3CDE8-EE7B-4367-A199-F8449DAD944F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{69857B07-4EDC-4532-80AF-F2DBD1E4821F} = {EC3E7F70-525E-4EBD-8997-880A53817438}
 	EndGlobalSection
 EndGlobal
