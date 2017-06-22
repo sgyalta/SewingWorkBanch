@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PassportView
+namespace TaskManager
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace PassportView
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddPassport());
+            Application.Run(new TaskManager());
         }
     }
 }
