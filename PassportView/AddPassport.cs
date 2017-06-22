@@ -15,17 +15,10 @@ namespace PassportView
         public AddPassport()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             panel0.Visible = true;
-            this.Width += panel0.Width;
+          
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+    
     }
 }
