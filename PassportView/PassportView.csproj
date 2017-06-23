@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,30 +60,40 @@
     <Compile Include="AddPassport.Designer.cs">
       <DependentUpon>AddPassport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Color.cs" />
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Cuting.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cuting.Designer.cs">
       <DependentUpon>Cuting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\DbPassportContext.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\Employee.cs" />
     <Compile Include="FillPasport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FillPasport.Designer.cs">
       <DependentUpon>FillPasport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Material.cs" />
+    <Compile Include="Model\Order.cs" />
     <Compile Include="OrderDeteil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrderDeteil.Designer.cs">
       <DependentUpon>OrderDeteil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\OrderProduct.cs" />
     <Compile Include="Passport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Passport.Designer.cs">
       <DependentUpon>Passport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Position.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="ProductDeteil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,14 +106,22 @@
     <Compile Include="ProductInfo.Designer.cs">
       <DependentUpon>ProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ProductMaker.cs" />
+    <Compile Include="Model\ProductProperty.cs" />
+    <Compile Include="Model\ProductStatu.cs" />
+    <Compile Include="Model\ProductType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Provider.cs" />
     <Compile Include="RawMaterials.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RawMaterials.Designer.cs">
       <DependentUpon>RawMaterials.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Repository.cs" />
+    <Compile Include="Model\Size.cs" />
+    <Compile Include="Model\Stock.cs" />
     <Compile Include="TaskManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +164,7 @@
     <EmbeddedResource Include="TaskManager.resx">
       <DependentUpon>TaskManager.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,5 +178,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
