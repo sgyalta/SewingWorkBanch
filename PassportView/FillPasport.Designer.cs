@@ -126,6 +126,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "Добавить паспорт";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listBox1
             // 
@@ -153,6 +154,7 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "Сформировать ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FillPasport
             // 

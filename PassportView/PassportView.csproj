@@ -60,6 +60,7 @@
     <Compile Include="AddPassport.Designer.cs">
       <DependentUpon>AddPassport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\Repository.cs" />
     <Compile Include="Model\Color.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Cuting.cs">
@@ -86,6 +87,7 @@
       <DependentUpon>OrderDeteil.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\OrderProduct.cs" />
+    <Compile Include="OrdersModel.cs" />
     <Compile Include="Passport.cs">
       <SubType>Form</SubType>
     </Compile>

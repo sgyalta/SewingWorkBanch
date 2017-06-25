@@ -62,13 +62,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel0 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel0 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabTextile.SuspendLayout();
             this.tabStrand.SuspendLayout();
@@ -76,9 +76,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel0.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -402,39 +402,14 @@
             this.panel1.Size = new System.Drawing.Size(682, 509);
             this.panel1.TabIndex = 40;
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(21, 298);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 195);
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel0
-            // 
-            this.panel0.Controls.Add(this.tabControl1);
-            this.panel0.Location = new System.Drawing.Point(688, 0);
-            this.panel0.Name = "panel0";
-            this.panel0.Size = new System.Drawing.Size(310, 509);
-            this.panel0.TabIndex = 41;
-            this.panel0.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(238, 359);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(206, 66);
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(235, 343);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "Штрих-код";
+            this.button1.Location = new System.Drawing.Point(339, 445);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 48);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -453,14 +428,40 @@
             this.label12.TabIndex = 45;
             this.label12.Text = "Себестоимость";
             // 
-            // button1
+            // label8
             // 
-            this.button1.Location = new System.Drawing.Point(339, 445);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 48);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(235, 343);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Штрих-код";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(238, 359);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(206, 66);
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(21, 298);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 195);
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel0
+            // 
+            this.panel0.Controls.Add(this.tabControl1);
+            this.panel0.Location = new System.Drawing.Point(688, 0);
+            this.panel0.Name = "panel0";
+            this.panel0.Size = new System.Drawing.Size(310, 509);
+            this.panel0.TabIndex = 41;
+            this.panel0.Visible = false;
             // 
             // AddPassport
             // 
@@ -481,9 +482,9 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel0.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

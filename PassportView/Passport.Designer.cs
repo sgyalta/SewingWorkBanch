@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Good = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.End = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Finish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,12 +45,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Good = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.End = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Finish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,36 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(632, 331);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Good
+            // 
+            this.Good.HeaderText = "Номер заказа";
+            this.Good.Name = "Good";
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Заказчик";
+            this.Name.Name = "Name";
+            // 
+            // End
+            // 
+            this.End.HeaderText = "Начало";
+            this.End.Name = "End";
+            // 
+            // Finish
+            // 
+            this.Finish.HeaderText = "Конец";
+            this.Finish.Name = "Finish";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Статус";
+            this.Status.Name = "Status";
+            // 
+            // Sum
+            // 
+            this.Sum.HeaderText = "Себестоимость заказа";
+            this.Sum.Name = "Sum";
             // 
             // label1
             // 
@@ -128,6 +158,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Сформировать заказ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -144,36 +175,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(145, 20);
             this.textBox2.TabIndex = 9;
-            // 
-            // Good
-            // 
-            this.Good.HeaderText = "Номер заказа";
-            this.Good.Name = "Good";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Заказчик";
-            this.Name.Name = "Name";
-            // 
-            // End
-            // 
-            this.End.HeaderText = "Начало";
-            this.End.Name = "End";
-            // 
-            // Finish
-            // 
-            this.Finish.HeaderText = "Конец";
-            this.Finish.Name = "Finish";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Статус";
-            this.Status.Name = "Status";
-            // 
-            // Sum
-            // 
-            this.Sum.HeaderText = "Себестоимость заказа";
-            this.Sum.Name = "Sum";
             // 
             // Passport
             // 

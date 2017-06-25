@@ -16,7 +16,7 @@ namespace PassportView
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TaskManager());
+            Application.Run(new Passport());
         }
     }
 }
