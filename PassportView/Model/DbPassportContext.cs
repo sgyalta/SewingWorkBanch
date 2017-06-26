@@ -1,14 +1,18 @@
-using System.Data.Entity;
-
 namespace PassportView.Model
 {
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
     public partial class DbPassportContext : DbContext
     {
         public DbPassportContext()
-            : base("name=DbPassportContext")
+            : base("name=DbPassportContext1")
         {
         }
 
+        public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Color> Colors { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
@@ -29,6 +33,11 @@ namespace PassportView.Model
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Category>()
+                .HasMany(e => e.Materials)
+                .WithRequired(e => e.Category)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Color>()
                 .HasMany(e => e.ProductProperties)
                 .WithRequired(e => e.Color)
@@ -85,9 +94,9 @@ namespace PassportView.Model
                 .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<ProductMaker>()
-                .HasMany(e => e.Products)
-                .WithRequired(e => e.ProductMaker)
+            modelBuilder.Entity<Product>()
+                .HasMany(e => e.ProductMakers)
+                .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ProductProperty>()

@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabTextile = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.tabStrand = new System.Windows.Forms.TabPage();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.tabFittings = new System.Windows.Forms.TabPage();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.lbSelectedMaterial = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbProductType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbSize = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,16 +42,16 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCutting = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cmbFittings = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbSewing = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,10 +62,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel0 = new System.Windows.Forms.Panel();
-            this.tabControl1.SuspendLayout();
-            this.tabTextile.SuspendLayout();
-            this.tabStrand.SuspendLayout();
-            this.tabFittings.SuspendLayout();
+            this.tabMaterial = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -81,81 +71,13 @@
             this.panel0.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // lbSelectedMaterial
             // 
-            this.tabControl1.Controls.Add(this.tabTextile);
-            this.tabControl1.Controls.Add(this.tabStrand);
-            this.tabControl1.Controls.Add(this.tabFittings);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(303, 503);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabTextile
-            // 
-            this.tabTextile.Controls.Add(this.listBox1);
-            this.tabTextile.Location = new System.Drawing.Point(4, 22);
-            this.tabTextile.Name = "tabTextile";
-            this.tabTextile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTextile.Size = new System.Drawing.Size(295, 477);
-            this.tabTextile.TabIndex = 0;
-            this.tabTextile.Text = "Ткань";
-            this.tabTextile.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(8, 9);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(271, 459);
-            this.listBox1.TabIndex = 0;
-            // 
-            // tabStrand
-            // 
-            this.tabStrand.Controls.Add(this.listBox2);
-            this.tabStrand.Location = new System.Drawing.Point(4, 22);
-            this.tabStrand.Name = "tabStrand";
-            this.tabStrand.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStrand.Size = new System.Drawing.Size(295, 477);
-            this.tabStrand.TabIndex = 1;
-            this.tabStrand.Text = "Нитки";
-            this.tabStrand.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(7, 6);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(271, 420);
-            this.listBox2.TabIndex = 1;
-            // 
-            // tabFittings
-            // 
-            this.tabFittings.Controls.Add(this.listBox3);
-            this.tabFittings.Location = new System.Drawing.Point(4, 22);
-            this.tabFittings.Name = "tabFittings";
-            this.tabFittings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFittings.Size = new System.Drawing.Size(295, 477);
-            this.tabFittings.TabIndex = 2;
-            this.tabFittings.Text = "Фурнитура";
-            this.tabFittings.UseVisualStyleBackColor = true;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(7, 6);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(271, 420);
-            this.listBox3.TabIndex = 1;
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(352, 28);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(308, 199);
-            this.listBox4.TabIndex = 1;
+            this.lbSelectedMaterial.FormattingEnabled = true;
+            this.lbSelectedMaterial.Location = new System.Drawing.Point(352, 28);
+            this.lbSelectedMaterial.Name = "lbSelectedMaterial";
+            this.lbSelectedMaterial.Size = new System.Drawing.Size(308, 199);
+            this.lbSelectedMaterial.TabIndex = 1;
             // 
             // label1
             // 
@@ -166,13 +88,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Выбранный материал";
             // 
-            // comboBox2
+            // cmbProductType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(21, 257);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(127, 21);
-            this.comboBox2.TabIndex = 18;
+            this.cmbProductType.FormattingEnabled = true;
+            this.cmbProductType.Location = new System.Drawing.Point(21, 257);
+            this.cmbProductType.Name = "cmbProductType";
+            this.cmbProductType.Size = new System.Drawing.Size(127, 21);
+            this.cmbProductType.TabIndex = 18;
             // 
             // label2
             // 
@@ -183,13 +105,13 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Название одежды";
             // 
-            // comboBox4
+            // cmbColor
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(238, 265);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(148, 21);
-            this.comboBox4.TabIndex = 25;
+            this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Location = new System.Drawing.Point(238, 265);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(148, 21);
+            this.cmbColor.TabIndex = 25;
             // 
             // label10
             // 
@@ -200,13 +122,13 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Цвет";
             // 
-            // comboBox3
+            // cmbSize
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(238, 307);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 21);
-            this.comboBox3.TabIndex = 27;
+            this.cmbSize.FormattingEnabled = true;
+            this.cmbSize.Location = new System.Drawing.Point(238, 307);
+            this.cmbSize.Name = "cmbSize";
+            this.cmbSize.Size = new System.Drawing.Size(148, 21);
+            this.cmbSize.TabIndex = 27;
             // 
             // label9
             // 
@@ -266,13 +188,13 @@
             this.textBox3.Size = new System.Drawing.Size(185, 20);
             this.textBox3.TabIndex = 35;
             // 
-            // comboBox1
+            // cmbCutting
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(9, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 21);
-            this.comboBox1.TabIndex = 37;
+            this.cmbCutting.FormattingEnabled = true;
+            this.cmbCutting.Location = new System.Drawing.Point(9, 32);
+            this.cmbCutting.Name = "cmbCutting";
+            this.cmbCutting.Size = new System.Drawing.Size(185, 21);
+            this.cmbCutting.TabIndex = 37;
             // 
             // label6
             // 
@@ -288,13 +210,13 @@
             this.groupBox1.Controls.Add(this.dateTimePicker3);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.comboBox6);
+            this.groupBox1.Controls.Add(this.cmbFittings);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.comboBox5);
+            this.groupBox1.Controls.Add(this.cmbSewing);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbCutting);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -325,13 +247,13 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(123, 20);
             this.dateTimePicker2.TabIndex = 45;
             // 
-            // comboBox6
+            // cmbFittings
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(9, 166);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(185, 21);
-            this.comboBox6.TabIndex = 43;
+            this.cmbFittings.FormattingEnabled = true;
+            this.cmbFittings.Location = new System.Drawing.Point(9, 166);
+            this.cmbFittings.Name = "cmbFittings";
+            this.cmbFittings.Size = new System.Drawing.Size(185, 21);
+            this.cmbFittings.TabIndex = 43;
             // 
             // label11
             // 
@@ -350,13 +272,13 @@
             this.textBox5.Size = new System.Drawing.Size(185, 20);
             this.textBox5.TabIndex = 42;
             // 
-            // comboBox5
+            // cmbSewing
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(9, 98);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(185, 21);
-            this.comboBox5.TabIndex = 40;
+            this.cmbSewing.FormattingEnabled = true;
+            this.cmbSewing.Location = new System.Drawing.Point(9, 98);
+            this.cmbSewing.Name = "cmbSewing";
+            this.cmbSewing.Size = new System.Drawing.Size(185, 21);
+            this.cmbSewing.TabIndex = 40;
             // 
             // label7
             // 
@@ -385,18 +307,18 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.listBox4);
+            this.panel1.Controls.Add(this.lbSelectedMaterial);
             this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cmbProductType);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.comboBox4);
+            this.panel1.Controls.Add(this.cmbColor);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.cmbSize);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(682, 509);
@@ -456,27 +378,30 @@
             // 
             // panel0
             // 
-            this.panel0.Controls.Add(this.tabControl1);
+            this.panel0.Controls.Add(this.tabMaterial);
             this.panel0.Location = new System.Drawing.Point(688, 0);
             this.panel0.Name = "panel0";
-            this.panel0.Size = new System.Drawing.Size(310, 509);
+            this.panel0.Size = new System.Drawing.Size(288, 509);
             this.panel0.TabIndex = 41;
-            this.panel0.Visible = false;
+            // 
+            // tabMaterial
+            // 
+            this.tabMaterial.Location = new System.Drawing.Point(3, 3);
+            this.tabMaterial.Name = "tabMaterial";
+            this.tabMaterial.SelectedIndex = 0;
+            this.tabMaterial.Size = new System.Drawing.Size(281, 503);
+            this.tabMaterial.TabIndex = 0;
             // 
             // AddPassport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 509);
+            this.ClientSize = new System.Drawing.Size(979, 509);
             this.Controls.Add(this.panel0);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(100, 100);
             this.Name = "AddPassport";
             this.Text = "AddPassport";
-            this.tabControl1.ResumeLayout(false);
-            this.tabTextile.ResumeLayout(false);
-            this.tabStrand.ResumeLayout(false);
-            this.tabFittings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -490,21 +415,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabTextile;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TabPage tabStrand;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.TabPage tabFittings;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox lbSelectedMaterial;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbProductType;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbSize;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
@@ -512,13 +429,13 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCutting;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cmbFittings;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbSewing;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
@@ -532,5 +449,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TabControl tabMaterial;
     }
 }

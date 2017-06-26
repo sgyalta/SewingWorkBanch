@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PassportView.Model;
+using PassportView.BusinessModel;
 
 namespace PassportView.Controller
 {
-  public class Repository
+  public class BusinessModelRepo
     {
       private  DbPassportContext Connect = new DbPassportContext();
 
@@ -24,9 +25,16 @@ namespace PassportView.Controller
             }).ToList();
         }
 
-        public List<Customer> GetCustomers()
+        public List<WarehouseMaterials> GetWarehouseMaterials(string category)
         {
-            return Connect.Customers.ToList();
+            return Connect.Materials.Where(x=>x.Category.Name == category).Select(x => new WarehouseMaterials
+            {
+                MaterialId = x.MaterialId,
+                Name = x.Name,
+                Category = x.Category.Name,
+                Quantity = x.Quantity,
+                CoastPrice = x.CoastPrice
+            }).ToList();
         }
     }
 }

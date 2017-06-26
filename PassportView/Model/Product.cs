@@ -1,9 +1,11 @@
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace PassportView.Model
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
     [Table("Product")]
     public partial class Product
     {
@@ -11,6 +13,7 @@ namespace PassportView.Model
         public Product()
         {
             OrderProducts = new HashSet<OrderProduct>();
+            ProductMakers = new HashSet<ProductMaker>();
         }
 
         public int ProductId { get; set; }
@@ -34,19 +37,22 @@ namespace PassportView.Model
 
         public int StatusId { get; set; }
 
-        public int ProductMakersId { get; set; }
-
         public bool IsMade { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string SCU { get; set; }
 
         public virtual Employee Employee { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProducts { get; set; }
 
-        public virtual ProductMaker ProductMaker { get; set; }
-
         public virtual ProductProperty ProductProperty { get; set; }
 
         public virtual ProductStatu ProductStatu { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductMaker> ProductMakers { get; set; }
     }
 }

@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PassportView.Controller;
+using PassportView.BusinessModel;
 
 namespace PassportView
 {
     public partial class FillPasport : Form
     {
         private Passport _passport;
-        Repository _repository = new Repository();
+        Repositer _repository = new Repositer();
         BindingSource _bgCustumers = new BindingSource();
 
         public FillPasport(Passport p)

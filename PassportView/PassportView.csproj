@@ -54,48 +54,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMaterial.Designer.cs">
+      <DependentUpon>AddMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPassport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddPassport.Designer.cs">
       <DependentUpon>AddPassport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Repository.cs" />
-    <Compile Include="Model\Color.cs" />
-    <Compile Include="Model\Customer.cs" />
+    <Compile Include="BusinessModel\SelectedMaterial.cs" />
+    <Compile Include="BusinessModel\WarehouseMaterials.cs" />
+    <Compile Include="Controller\BusinessModelRepo.cs" />
+    <Compile Include="Controller\Repositer.cs" />
     <Compile Include="Cuting.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cuting.Designer.cs">
       <DependentUpon>Cuting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DbPassportContext.cs" />
-    <Compile Include="Model\Department.cs" />
-    <Compile Include="Model\Employee.cs" />
     <Compile Include="FillPasport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FillPasport.Designer.cs">
       <DependentUpon>FillPasport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Color.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\DbPassportContext.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Material.cs" />
     <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderProduct.cs" />
+    <Compile Include="Model\Position.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ProductMaker.cs" />
+    <Compile Include="Model\ProductProperty.cs" />
+    <Compile Include="Model\ProductStatu.cs" />
+    <Compile Include="Model\ProductType.cs" />
+    <Compile Include="Model\Provider.cs" />
+    <Compile Include="Model\Repository.cs" />
+    <Compile Include="Model\Size.cs" />
+    <Compile Include="Model\Stock.cs" />
     <Compile Include="OrderDeteil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrderDeteil.Designer.cs">
       <DependentUpon>OrderDeteil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\OrderProduct.cs" />
-    <Compile Include="OrdersModel.cs" />
+    <Compile Include="BusinessModel\OrdersModel.cs" />
     <Compile Include="Passport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Passport.Designer.cs">
       <DependentUpon>Passport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Position.cs" />
-    <Compile Include="Model\Product.cs" />
     <Compile Include="ProductDeteil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,28 +126,23 @@
     <Compile Include="ProductInfo.Designer.cs">
       <DependentUpon>ProductInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ProductMaker.cs" />
-    <Compile Include="Model\ProductProperty.cs" />
-    <Compile Include="Model\ProductStatu.cs" />
-    <Compile Include="Model\ProductType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Provider.cs" />
     <Compile Include="RawMaterials.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RawMaterials.Designer.cs">
       <DependentUpon>RawMaterials.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Repository.cs" />
-    <Compile Include="Model\Size.cs" />
-    <Compile Include="Model\Stock.cs" />
     <Compile Include="TaskManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TaskManager.Designer.cs">
       <DependentUpon>TaskManager.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddMaterial.resx">
+      <DependentUpon>AddMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddPassport.resx">
       <DependentUpon>AddPassport.cs</DependentUpon>
     </EmbeddedResource>

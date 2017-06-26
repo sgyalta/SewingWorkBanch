@@ -6,27 +6,22 @@ namespace PassportView.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Repository")]
-    public partial class Repository
+    [Table("Category")]
+    public partial class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Repository()
+        public Category()
         {
-            ProductTypes = new HashSet<ProductType>();
+            Materials = new HashSet<Material>();
         }
 
-        [Key]
-        public int FileId { get; set; }
+        public int CategoryId { get; set; }
 
         [Required]
-        [StringLength(128)]
-        public string Path { get; set; }
-
-        public DateTime CreationDate { get; set; }
-
-        public DateTime? LastEdit { get; set; }
+        [StringLength(50)]
+        public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductType> ProductTypes { get; set; }
+        public virtual ICollection<Material> Materials { get; set; }
     }
 }
