@@ -9,6 +9,12 @@ namespace PassportView.Model
     [Table("Material")]
     public partial class Material
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Material()
+        {
+            MaterialUseds = new HashSet<MaterialUsed>();
+        }
+
         public int MaterialId { get; set; }
 
         public double Quantity { get; set; }
@@ -32,6 +38,9 @@ namespace PassportView.Model
         public virtual Category Category { get; set; }
 
         public virtual Color Color { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MaterialUsed> MaterialUseds { get; set; }
 
         public virtual Provider Provider { get; set; }
     }

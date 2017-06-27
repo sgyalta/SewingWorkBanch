@@ -8,7 +8,7 @@ namespace PassportView.Model
     public partial class DbPassportContext : DbContext
     {
         public DbPassportContext()
-            : base("name=DbPassportContext1")
+            : base("name=DbPassportContext4")
         {
         }
 
@@ -18,6 +18,7 @@ namespace PassportView.Model
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Material> Materials { get; set; }
+        public virtual DbSet<MaterialUsed> MaterialUseds { get; set; }
         public virtual DbSet<OrderProduct> OrderProducts { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Position> Positions { get; set; }
@@ -54,13 +55,17 @@ namespace PassportView.Model
                 .WithRequired(e => e.Department)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Products)
-                .WithRequired(e => e.Employee)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Material>()
                 .Property(e => e.CoastPrice)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<Material>()
+                .HasMany(e => e.MaterialUseds)
+                .WithRequired(e => e.Material)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MaterialUsed>()
+                .Property(e => e.TotalCoast)
                 .HasPrecision(19, 4);
 
             modelBuilder.Entity<Order>()
@@ -88,6 +93,11 @@ namespace PassportView.Model
             modelBuilder.Entity<Product>()
                 .Property(e => e.CostPrice)
                 .HasPrecision(19, 4);
+
+            modelBuilder.Entity<Product>()
+                .HasMany(e => e.MaterialUseds)
+                .WithRequired(e => e.Product)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()
                 .HasMany(e => e.OrderProducts)

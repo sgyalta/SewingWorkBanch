@@ -66,6 +66,8 @@
     <Compile Include="AddPassport.Designer.cs">
       <DependentUpon>AddPassport.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessModel\AssignedEmployees.cs" />
+    <Compile Include="BusinessModel\ProductInfo.cs" />
     <Compile Include="BusinessModel\SelectedMaterial.cs" />
     <Compile Include="BusinessModel\WarehouseMaterials.cs" />
     <Compile Include="Controller\BusinessModelRepo.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Model\Department.cs" />
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Material.cs" />
+    <Compile Include="Model\MaterialUsed.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\OrderProduct.cs" />
     <Compile Include="Model\Position.cs" />
@@ -193,6 +196,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Img\barcode.png" />
+    <Content Include="Img\bluza.png" />
+    <Content Include="Img\pants.png" />
+    <Content Include="Img\short.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

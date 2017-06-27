@@ -12,6 +12,7 @@ namespace PassportView.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
+            MaterialUseds = new HashSet<MaterialUsed>();
             OrderProducts = new HashSet<OrderProduct>();
             ProductMakers = new HashSet<ProductMaker>();
         }
@@ -33,8 +34,6 @@ namespace PassportView.Model
 
         public int Quantity { get; set; }
 
-        public int EmployeeId { get; set; }
-
         public int StatusId { get; set; }
 
         public bool IsMade { get; set; }
@@ -43,7 +42,8 @@ namespace PassportView.Model
         [StringLength(50)]
         public string SCU { get; set; }
 
-        public virtual Employee Employee { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MaterialUsed> MaterialUseds { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProducts { get; set; }

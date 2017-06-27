@@ -27,7 +27,7 @@ namespace PassportView
         private void numericQuant_ValueChanged(object sender, EventArgs e)
         {
             sl.Quantity = (double)numericQuant.Value;
-            tbCoastPrice.Text = $"{sl.CalcTotalСost()}";
+            tbCoastPrice.Text = $"{sl.CoastPrice}";
         }
     }
 }

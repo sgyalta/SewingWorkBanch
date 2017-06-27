@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbNumberOrder = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpExpiress = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbTatalCost = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbCustomer = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lbProduct = new System.Windows.Forms.ListBox();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnAddOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox2
+            // tbNumberOrder
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(151, 20);
-            this.textBox2.TabIndex = 5;
+            this.tbNumberOrder.Location = new System.Drawing.Point(12, 25);
+            this.tbNumberOrder.Name = "tbNumberOrder";
+            this.tbNumberOrder.ReadOnly = true;
+            this.tbNumberOrder.Size = new System.Drawing.Size(151, 20);
+            this.tbNumberOrder.TabIndex = 5;
             // 
             // label2
             // 
@@ -69,12 +69,12 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Дата окончания срока";
             // 
-            // dateTimePicker2
+            // dtpExpiress
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(326, 25);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(149, 20);
-            this.dateTimePicker2.TabIndex = 9;
+            this.dtpExpiress.Location = new System.Drawing.Point(326, 25);
+            this.dtpExpiress.Name = "dtpExpiress";
+            this.dtpExpiress.Size = new System.Drawing.Size(149, 20);
+            this.dtpExpiress.TabIndex = 9;
             // 
             // label6
             // 
@@ -85,13 +85,13 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Себестоимость";
             // 
-            // textBox3
+            // tbTatalCost
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 291);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(151, 20);
-            this.textBox3.TabIndex = 15;
+            this.tbTatalCost.Location = new System.Drawing.Point(12, 291);
+            this.tbTatalCost.Name = "tbTatalCost";
+            this.tbTatalCost.ReadOnly = true;
+            this.tbTatalCost.Size = new System.Drawing.Size(151, 20);
+            this.tbTatalCost.TabIndex = 15;
             // 
             // label7
             // 
@@ -110,13 +110,13 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Заказчик";
             // 
-            // comboBox5
+            // cmbCustomer
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(169, 25);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(151, 21);
-            this.comboBox5.TabIndex = 25;
+            this.cmbCustomer.FormattingEnabled = true;
+            this.cmbCustomer.Location = new System.Drawing.Point(169, 25);
+            this.cmbCustomer.Name = "cmbCustomer";
+            this.cmbCustomer.Size = new System.Drawing.Size(151, 21);
+            this.cmbCustomer.TabIndex = 25;
             // 
             // button1
             // 
@@ -128,54 +128,56 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox1
+            // lbProduct
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 118);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(463, 95);
-            this.listBox1.TabIndex = 27;
+            this.lbProduct.FormattingEnabled = true;
+            this.lbProduct.Location = new System.Drawing.Point(12, 118);
+            this.lbProduct.Name = "lbProduct";
+            this.lbProduct.Size = new System.Drawing.Size(463, 95);
+            this.lbProduct.TabIndex = 27;
             // 
-            // button2
+            // btnDel
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(12, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(463, 39);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Удалить паспорт";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDel.Enabled = false;
+            this.btnDel.Location = new System.Drawing.Point(12, 226);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(463, 39);
+            this.btnDel.TabIndex = 28;
+            this.btnDel.Text = "Удалить паспорт";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // button3
+            // btnAddOrder
             // 
-            this.button3.Location = new System.Drawing.Point(283, 271);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 40);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Сформировать ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAddOrder.Location = new System.Drawing.Point(283, 271);
+            this.btnAddOrder.Name = "btnAddOrder";
+            this.btnAddOrder.Size = new System.Drawing.Size(192, 40);
+            this.btnAddOrder.TabIndex = 29;
+            this.btnAddOrder.Text = "Сформировать ";
+            this.btnAddOrder.UseVisualStyleBackColor = true;
+            this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
             // 
             // FillPasport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 324);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnAddOrder);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.lbProduct);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cmbCustomer);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbTatalCost);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dtpExpiress);
+            this.Controls.Add(this.tbNumberOrder);
             this.Controls.Add(this.label2);
             this.Name = "FillPasport";
             this.Text = "FillPasport";
+            this.EnabledChanged += new System.EventHandler(this.FillPasport_EnabledChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,18 +185,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbNumberOrder;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpExpiress;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbTatalCost;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbCustomer;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox lbProduct;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnAddOrder;
     }
 }

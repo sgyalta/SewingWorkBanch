@@ -22,6 +22,14 @@ namespace PassportView.Model
         [StringLength(50)]
         public string Name { get; set; }
 
+        public int? R { get; set; }
+
+        public int? G { get; set; }
+
+        public int? B { get; set; }
+
+        public int? A { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Material> Materials { get; set; }
 

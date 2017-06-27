@@ -9,12 +9,6 @@ namespace PassportView.Model
     [Table("Employee")]
     public partial class Employee
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Employee()
-        {
-            Products = new HashSet<Product>();
-        }
-
         public int EmployeeId { get; set; }
 
         [Required]
@@ -24,8 +18,5 @@ namespace PassportView.Model
         public int PositionId { get; set; }
 
         public virtual Position Position { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
     }
 }
