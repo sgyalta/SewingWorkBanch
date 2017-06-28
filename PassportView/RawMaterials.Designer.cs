@@ -28,41 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtvRawMaterial = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddMaterials = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.IdProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductSKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Manufacture = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvRawMaterial)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtvRawMaterial
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdProduct,
-            this.ProductName,
-            this.ProductSKU,
-            this.InStock,
-            this.Color,
-            this.CategoryProduct,
-            this.Manufacture});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 311);
-            this.dataGridView1.TabIndex = 0;
+            this.dtvRawMaterial.AllowUserToAddRows = false;
+            this.dtvRawMaterial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtvRawMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvRawMaterial.Location = new System.Drawing.Point(15, 66);
+            this.dtvRawMaterial.Name = "dtvRawMaterial";
+            this.dtvRawMaterial.ReadOnly = true;
+            this.dtvRawMaterial.Size = new System.Drawing.Size(743, 311);
+            this.dtvRawMaterial.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -113,18 +101,19 @@
             this.textBox2.Size = new System.Drawing.Size(136, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // button1
+            // btnAddMaterials
             // 
-            this.button1.Location = new System.Drawing.Point(166, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 41);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Добавить ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddMaterials.Location = new System.Drawing.Point(206, 383);
+            this.btnAddMaterials.Name = "btnAddMaterials";
+            this.btnAddMaterials.Size = new System.Drawing.Size(140, 41);
+            this.btnAddMaterials.TabIndex = 7;
+            this.btnAddMaterials.Text = "Добавить ";
+            this.btnAddMaterials.UseVisualStyleBackColor = true;
+            this.btnAddMaterials.Click += new System.EventHandler(this.btnAddMaterials_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(386, 383);
+            this.button2.Location = new System.Drawing.Point(426, 383);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 41);
             this.button2.TabIndex = 8;
@@ -140,41 +129,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Список материалов:";
             // 
-            // IdProduct
-            // 
-            this.IdProduct.HeaderText = "Id";
-            this.IdProduct.Name = "IdProduct";
-            // 
-            // ProductName
-            // 
-            this.ProductName.HeaderText = "Наименование";
-            this.ProductName.Name = "ProductName";
-            // 
-            // ProductSKU
-            // 
-            this.ProductSKU.HeaderText = "Штрих код";
-            this.ProductSKU.Name = "ProductSKU";
-            // 
-            // InStock
-            // 
-            this.InStock.HeaderText = "Количество";
-            this.InStock.Name = "InStock";
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Цвет";
-            this.Color.Name = "Color";
-            // 
-            // CategoryProduct
-            // 
-            this.CategoryProduct.HeaderText = "Категория";
-            this.CategoryProduct.Name = "CategoryProduct";
-            // 
-            // Manufacture
-            // 
-            this.Manufacture.HeaderText = "Поставщик";
-            this.Manufacture.Name = "Manufacture";
-            // 
             // RawItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,17 +136,18 @@
             this.ClientSize = new System.Drawing.Size(770, 436);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddMaterials);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtvRawMaterial);
             this.Name = "RawItem";
             this.Text = "Склад материалов";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RawItem_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.dtvRawMaterial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,23 +155,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtvRawMaterial;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddMaterials;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductSKU;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Manufacture;
     }
 }
 

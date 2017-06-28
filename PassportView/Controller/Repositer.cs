@@ -40,5 +40,10 @@ namespace PassportView.Controller
         {
             return Connect.Sizes.ToList();
         }
+
+        public List<Provider> GetProvider()
+        {
+            return Connect.Providers.ToList();
+        }
     }
 }

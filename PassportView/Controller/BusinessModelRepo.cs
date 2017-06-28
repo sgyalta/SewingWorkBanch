@@ -51,5 +51,19 @@ namespace PassportView.Controller
                 CostPrice = x.CostPriceOrder
             }).FirstOrDefault();
         }
+
+        public List<RawMaterial> GetRawMaterials()
+        {
+            return Connect.Materials.Select(x => new RawMaterial
+            {
+                MaterialId = x.MaterialId,
+                Name = x.Name,
+                BarCode = x.BarCode,
+                Quantity = x.Quantity,
+                ColorName = x.Color.Name,
+                CategoryName = x.Category.Name,
+                ProviderName = x.Provider.Name
+            }).ToList();
+        }
     }
 }

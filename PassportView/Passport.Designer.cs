@@ -39,6 +39,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dgwOrderModels = new System.Windows.Forms.DataGridView();
+            this.btnRawMaterial = new System.Windows.Forms.Button();
+            this.btnTaskManager = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOrderModels)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +103,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(227, 413);
+            this.button1.Location = new System.Drawing.Point(237, 413);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 31);
             this.button1.TabIndex = 8;
@@ -135,11 +137,32 @@
             this.dgwOrderModels.Size = new System.Drawing.Size(632, 331);
             this.dgwOrderModels.TabIndex = 0;
             // 
+            // btnRawMaterial
+            // 
+            this.btnRawMaterial.Location = new System.Drawing.Point(12, 413);
+            this.btnRawMaterial.Name = "btnRawMaterial";
+            this.btnRawMaterial.Size = new System.Drawing.Size(184, 31);
+            this.btnRawMaterial.TabIndex = 11;
+            this.btnRawMaterial.Text = "Склад материалов";
+            this.btnRawMaterial.UseVisualStyleBackColor = true;
+            this.btnRawMaterial.Click += new System.EventHandler(this.btnRawMaterial_Click);
+            // 
+            // btnTaskManager
+            // 
+            this.btnTaskManager.Location = new System.Drawing.Point(463, 413);
+            this.btnTaskManager.Name = "btnTaskManager";
+            this.btnTaskManager.Size = new System.Drawing.Size(184, 31);
+            this.btnTaskManager.TabIndex = 12;
+            this.btnTaskManager.Text = "Бизнес процессы";
+            this.btnTaskManager.UseVisualStyleBackColor = true;
+            // 
             // Passport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 456);
+            this.Controls.Add(this.btnTaskManager);
+            this.Controls.Add(this.btnRawMaterial);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
@@ -171,6 +194,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dgwOrderModels;
+        private System.Windows.Forms.Button btnRawMaterial;
+        private System.Windows.Forms.Button btnTaskManager;
     }
 }
 

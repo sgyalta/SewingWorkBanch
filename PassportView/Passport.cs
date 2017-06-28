@@ -32,5 +32,12 @@ namespace PassportView
             this.Enabled = false;
             flFillPasport.Show();
         }
+
+        private void btnRawMaterial_Click(object sender, EventArgs e)
+        {
+            RawItem ri = new RawItem(this);
+            this.Enabled = false;
+            ri.Show();
+        }
     }
 }
