@@ -17,6 +17,7 @@ namespace PassportView
     public partial class FillPasport : Form
     {
         private Passport _passport;
+        private BusinessModelRepo bmr = new BusinessModelRepo();
         private DbPassportContext Connect = new DbPassportContext();
         private Repositer _repository = new Repositer();
         private BindingSource _bgCustumers = new BindingSource();
@@ -57,21 +58,38 @@ namespace PassportView
         {
             ProductInfo pi = (ProductInfo)bsProduct.Current;
 
-            foreach (var it in pi.SelectedMaterial)
+            //foreach (var it in pi.SelectedMaterial)
+            //{
+            //    Material m = Connect.Materials.Find(it.MaterialId);
+            //    m.Quantity += it.Quantity;
+            //    Connect.SaveChanges();
+            //}
+
+            ReturnMaterial(pi.SelectedMaterial);
+
+            bsProduct.Remove(pi);
+            UpdateCoast();
+
+        }
+
+        private void ReturnMaterial(List<SelectedMaterial> sm)
+        {
+            foreach (var it in sm)
             {
                 Material m = Connect.Materials.Find(it.MaterialId);
                 m.Quantity += it.Quantity;
                 Connect.SaveChanges();
             }
-
-            bsProduct.Remove(pi);
-            tbTatalCost.Text = productInfo.Sum(x => x.CostPrice).ToString();
-
         }
 
         private void FillPasport_EnabledChanged(object sender, EventArgs e)
         {
             btnDel.Enabled = true;
+            UpdateCoast();
+        }
+
+        private void UpdateCoast()
+        {
             tbTatalCost.Text = productInfo.Sum(x => x.CostPrice).ToString();
         }
 
@@ -154,8 +172,22 @@ namespace PassportView
 
                     Connect.OrderProducts.AddOrUpdate(op);
                     Connect.SaveChanges();
+
+                    _passport.BsOrderModels.Add(bmr.GetOrdersModel(OrderId));
+
+                    _passport.Enabled = true;
+                    this.Close();
                 }
             }
+        }
+
+        private void FillPasport_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            foreach (var product in productInfo)
+                ReturnMaterial(product.SelectedMaterial);
+
+            _passport.Enabled = true;
+            this.Dispose();
         }
     }
 }

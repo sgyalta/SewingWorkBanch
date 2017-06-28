@@ -73,7 +73,7 @@ namespace PassportView
 
             UpdateTabControl();
         }
-
+        // формирую склад (создается динамически таб контрол с гридами)
         private void UpdateTabControl()
         {
             tabMaterial.TabPages.Clear();
@@ -97,6 +97,7 @@ namespace PassportView
             }
         }
 
+        // выбираю нужный материал для формирования паспорта
         private void Dg_DoubleClick(object sender, EventArgs e)
         {
             WarehouseMaterials res = (WarehouseMaterials)bsMaterial[tabMaterial.SelectedIndex].Current;
@@ -139,12 +140,13 @@ namespace PassportView
             }
             UpdateCoast();
         }
-
+        // обновление себестоимости 
         private void UpdateCoast()
         {
             tbCostPrice.Text = selectedMaterial.Sum(x => x.CoastPrice).ToString();
         }
 
+        //удаление выбранного материала
         private void dgvSelectedMaterial_DoubleClick(object sender, EventArgs e)
         {
             SelectedMaterial sm = (SelectedMaterial)bsSelectedMaterial.Current;
@@ -159,6 +161,7 @@ namespace PassportView
             bsSelectedMaterial.Remove(sm);
         }
 
+        // вывожу каартинку продукта
         private void cmbProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
            int idProductType = (int)cmbProductType.SelectedValue;
@@ -168,6 +171,7 @@ namespace PassportView
             prodInfo.ProductType = p;
         }
 
+        // меняю цвет
         private void cmbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
             int idColor = (int)cmbColor.SelectedValue;
@@ -176,6 +180,7 @@ namespace PassportView
             prodInfo.IdColor = idColor;
         }
 
+        // выбираю сотрудников для работы
         private void cmbCutting_SelectedIndexChanged(object sender, EventArgs e)
         {
             Employee em = (Employee)cmbCutting.SelectedItem;
@@ -194,6 +199,7 @@ namespace PassportView
             tbFittings.Text = em.Name;
         }
 
+        // собираю данные для паспорта и вывожу в листбокс на форме FILLpassport
         private void button1_Click(object sender, EventArgs e)
         {
             if(tbDesc.Text!=string.Empty && tbCostPrice.Text!=string.Empty && numericQuant.Value > 0)

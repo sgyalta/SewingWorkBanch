@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Good = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.End = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Finish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,53 +38,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgwOrderModels = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOrderModels)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Good,
-            this.Name,
-            this.End,
-            this.Finish,
-            this.Status,
-            this.Sum});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(632, 331);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Good
-            // 
-            this.Good.HeaderText = "Номер заказа";
-            this.Good.Name = "Good";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Заказчик";
-            this.Name.Name = "Name";
-            // 
-            // End
-            // 
-            this.End.HeaderText = "Начало";
-            this.End.Name = "End";
-            // 
-            // Finish
-            // 
-            this.Finish.HeaderText = "Конец";
-            this.Finish.Name = "Finish";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Статус";
-            this.Status.Name = "Status";
-            // 
-            // Sum
-            // 
-            this.Sum.HeaderText = "Себестоимость заказа";
-            this.Sum.Name = "Sum";
             // 
             // label1
             // 
@@ -176,6 +125,16 @@
             this.textBox2.Size = new System.Drawing.Size(145, 20);
             this.textBox2.TabIndex = 9;
             // 
+            // dgwOrderModels
+            // 
+            this.dgwOrderModels.AllowUserToAddRows = false;
+            this.dgwOrderModels.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwOrderModels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwOrderModels.Location = new System.Drawing.Point(15, 76);
+            this.dgwOrderModels.Name = "dgwOrderModels";
+            this.dgwOrderModels.Size = new System.Drawing.Size(632, 331);
+            this.dgwOrderModels.TabIndex = 0;
+            // 
             // Passport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,18 +150,16 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-           // this.Name = "Passport";
+            this.Controls.Add(this.dgwOrderModels);
+            this.Name = "Passport";
             this.Text = "Заказы";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOrderModels)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
@@ -213,12 +170,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Good;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn End;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Finish;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sum;
+        private System.Windows.Forms.DataGridView dgwOrderModels;
     }
 }
 

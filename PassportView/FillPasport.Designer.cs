@@ -177,6 +177,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FillPasport";
             this.Text = "FillPasport";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FillPasport_FormClosed);
             this.EnabledChanged += new System.EventHandler(this.FillPasport_EnabledChanged);
             this.ResumeLayout(false);
             this.PerformLayout();

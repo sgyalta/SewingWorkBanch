@@ -24,7 +24,7 @@ namespace PassportView.Controller
             }).ToList();
         }
 
-        public List<OrdersModel> GetOrdersModel()
+        public List<OrdersModel> GetOrdersModels()
         {
             return Connect.Orders.Select(x => new OrdersModel
             {
@@ -36,6 +36,20 @@ namespace PassportView.Controller
                 Status = x.ProductStatu.Name,
                 CostPrice = x.CostPriceOrder
             }).ToList();
+        }
+
+        public OrdersModel GetOrdersModel(int id)
+        {
+            return Connect.Orders.Where(x => x.OrderId == id).Select(x => new OrdersModel
+            {
+                OrderId = x.OrderId,
+                OrderNumber = x.OrderNumber,
+                Custumer = x.Customer.Name,
+                DateBegin = DateTime.Now,
+                Expiress = x.Expiress,
+                Status = x.ProductStatu.Name,
+                CostPrice = x.CostPriceOrder
+            }).FirstOrDefault();
         }
     }
 }

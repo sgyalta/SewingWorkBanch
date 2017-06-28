@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassportView.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,17 @@ namespace PassportView
 {
     public partial class Passport : Form
     {
+        BusinessModelRepo bmr = new BusinessModelRepo();
+
+        public BindingSource BsOrderModels { get; set; }
+
         public Passport()
         {
             InitializeComponent();
-        
+            BsOrderModels = new BindingSource();
+
+            BsOrderModels.DataSource = bmr.GetOrdersModels();
+            dgwOrderModels.DataSource = BsOrderModels;
         }
 
         private void button1_Click(object sender, EventArgs e)

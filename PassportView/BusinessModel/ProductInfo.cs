@@ -23,11 +23,6 @@ namespace PassportView.BusinessModel
         public string SCU { get; set; }
         public string BarCode { get; set; }
 
-        public ProductInfo()
-        {
-            //AssignedEmployees = new List<BusinessModel.AssignedEmployees>();
-            //SelectedMaterial = new List<BusinessModel.SelectedMaterial>();
-        }
 
         public override string ToString()
         {

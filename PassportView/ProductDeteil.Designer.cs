@@ -34,6 +34,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,9 +56,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -121,6 +121,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Мастера";
             // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(202, 110);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(119, 20);
+            this.textBox12.TabIndex = 50;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(202, 71);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(119, 20);
+            this.textBox11.TabIndex = 49;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(202, 32);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(119, 20);
+            this.textBox10.TabIndex = 48;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -132,7 +156,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(6, 110);
+            this.textBox5.Location = new System.Drawing.Point(9, 110);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(185, 20);
@@ -152,7 +176,7 @@
             this.textBox4.Location = new System.Drawing.Point(10, 71);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(185, 20);
+            this.textBox4.Size = new System.Drawing.Size(183, 20);
             this.textBox4.TabIndex = 39;
             // 
             // label6
@@ -282,30 +306,6 @@
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(61, 20);
             this.textBox9.TabIndex = 69;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(202, 32);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(119, 20);
-            this.textBox10.TabIndex = 48;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(202, 71);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(119, 20);
-            this.textBox11.TabIndex = 49;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(202, 110);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(119, 20);
-            this.textBox12.TabIndex = 50;
             // 
             // ProductDeteil
             // 
