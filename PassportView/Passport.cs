@@ -39,5 +39,14 @@ namespace PassportView
             this.Enabled = false;
             ri.Show();
         }
+
+        private void dgwOrderModels_DoubleClick(object sender, EventArgs e)
+        {
+            OrdersModel om = (OrdersModel)BsOrderModels.Current;
+
+            OrderDeteil od = new OrderDeteil(this, om.OrderId);
+            this.Enabled = false;
+            od.Show();
+        }
     }
 }

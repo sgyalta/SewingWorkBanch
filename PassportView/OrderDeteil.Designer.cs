@@ -28,81 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.End = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Art = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvOrderDeteil = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDeteil)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvOrderDeteil
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.End,
-            this.Art,
-            this.Size,
-            this.Quantity,
-            this.Sum,
-            this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(638, 396);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // End
-            // 
-            this.End.HeaderText = "Наименование изделия";
-            this.End.Name = "End";
-            // 
-            // Art
-            // 
-            this.Art.HeaderText = "Артикул";
-            this.Art.Name = "Art";
-            // 
-            // Size
-            // 
-            this.Size.HeaderText = "Размер";
-            this.Size.Name = "Size";
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Количество";
-            this.Quantity.Name = "Quantity";
-            // 
-            // Sum
-            // 
-            this.Sum.HeaderText = "Себестоимость";
-            this.Sum.Name = "Sum";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Статус";
-            this.Status.Name = "Status";
+            this.dgvOrderDeteil.AllowUserToAddRows = false;
+            this.dgvOrderDeteil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrderDeteil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrderDeteil.Location = new System.Drawing.Point(12, 12);
+            this.dgvOrderDeteil.Name = "dgvOrderDeteil";
+            this.dgvOrderDeteil.Size = new System.Drawing.Size(638, 396);
+            this.dgvOrderDeteil.TabIndex = 11;
             // 
             // OrderDeteil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 420);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOrderDeteil);
+            this.MinimizeBox = false;
             this.Name = "OrderDeteil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderDeteil";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OrderDeteil_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDeteil)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn End;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Art;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridView dgvOrderDeteil;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassportView.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,26 @@ namespace PassportView
 {
     public partial class OrderDeteil : Form
     {
-        public OrderDeteil()
+        private Passport p;
+        private BindingSource bsOrderDeteil = new BindingSource();
+        private BusinessModelRepo bmr = new BusinessModelRepo();
+
+        private int OrderId;
+
+        public OrderDeteil(Passport p, int OrderId)
         {
             InitializeComponent();
+            this.p = p;
+            this.OrderId = OrderId;
+
+            bsOrderDeteil.DataSource = bmr.GetOrderProductsDeteil(OrderId);
+            dgvOrderDeteil.DataSource = bsOrderDeteil;
+
+        }
+
+        private void OrderDeteil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            p.Enabled = true;
         }
     }
 }

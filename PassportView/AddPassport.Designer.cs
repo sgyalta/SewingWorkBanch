@@ -412,8 +412,10 @@
             this.ClientSize = new System.Drawing.Size(979, 509);
             this.Controls.Add(this.panel0);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(100, 100);
             this.Name = "AddPassport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPassport";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddPassport_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericQuant)).EndInit();

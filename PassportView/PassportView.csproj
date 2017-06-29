@@ -67,6 +67,7 @@
       <DependentUpon>AddPassport.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessModel\AssignedEmployees.cs" />
+    <Compile Include="BusinessModel\OrderProductDeteil.cs" />
     <Compile Include="BusinessModel\ProductInfo.cs" />
     <Compile Include="BusinessModel\RawMaterial.cs" />
     <Compile Include="BusinessModel\SelectedMaterial.cs" />

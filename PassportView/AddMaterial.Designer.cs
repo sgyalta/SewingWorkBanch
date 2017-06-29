@@ -111,7 +111,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbMaterial);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "AddMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMaterial";
             ((System.ComponentModel.ISupportInitialize)(this.numericQuant)).EndInit();
             this.ResumeLayout(false);

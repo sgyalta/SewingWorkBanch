@@ -134,8 +134,10 @@
             this.dgwOrderModels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwOrderModels.Location = new System.Drawing.Point(15, 76);
             this.dgwOrderModels.Name = "dgwOrderModels";
+            this.dgwOrderModels.ReadOnly = true;
             this.dgwOrderModels.Size = new System.Drawing.Size(632, 331);
             this.dgwOrderModels.TabIndex = 0;
+            this.dgwOrderModels.DoubleClick += new System.EventHandler(this.dgwOrderModels_DoubleClick);
             // 
             // btnRawMaterial
             // 
@@ -174,7 +176,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgwOrderModels);
+            this.MaximizeBox = false;
             this.Name = "Passport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заказы";
             ((System.ComponentModel.ISupportInitialize)(this.dgwOrderModels)).EndInit();
             this.ResumeLayout(false);

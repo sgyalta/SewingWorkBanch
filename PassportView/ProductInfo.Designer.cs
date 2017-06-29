@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbMaterialName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCategories = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbBarCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.numericQuant = new System.Windows.Forms.NumericUpDown();
+            this.btnSave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbProvider = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.cmdColor = new System.Windows.Forms.ComboBox();
+            this.pictureColor = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericQuant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureColor)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // tbMaterialName
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 20);
-            this.textBox2.TabIndex = 1;
+            this.tbMaterialName.Location = new System.Drawing.Point(12, 33);
+            this.tbMaterialName.Name = "tbMaterialName";
+            this.tbMaterialName.Size = new System.Drawing.Size(187, 20);
+            this.tbMaterialName.TabIndex = 1;
             // 
             // label1
             // 
@@ -99,12 +100,13 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Штрих код";
             // 
-            // textBox3
+            // tbBarCode
             // 
-            this.textBox3.Location = new System.Drawing.Point(223, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 20);
-            this.textBox3.TabIndex = 8;
+            this.tbBarCode.Location = new System.Drawing.Point(223, 72);
+            this.tbBarCode.Name = "tbBarCode";
+            this.tbBarCode.ReadOnly = true;
+            this.tbBarCode.Size = new System.Drawing.Size(187, 20);
+            this.tbBarCode.TabIndex = 8;
             // 
             // label5
             // 
@@ -115,21 +117,28 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Количество";
             // 
-            // numericUpDown1
+            // numericQuant
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(52, 114);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(66, 20);
-            this.numericUpDown1.TabIndex = 11;
+            this.numericQuant.Location = new System.Drawing.Point(52, 114);
+            this.numericQuant.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericQuant.Name = "numericQuant";
+            this.numericQuant.Size = new System.Drawing.Size(66, 20);
+            this.numericQuant.TabIndex = 11;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(52, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 40);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSave.Location = new System.Drawing.Point(52, 204);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(141, 40);
+            this.btnSave.TabIndex = 14;
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button2
             // 
@@ -140,13 +149,13 @@
             this.button2.Text = "Закрыть";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // cmbProvider
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(12, 72);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(187, 21);
-            this.comboBox2.TabIndex = 16;
+            this.cmbProvider.FormattingEnabled = true;
+            this.cmbProvider.Location = new System.Drawing.Point(12, 72);
+            this.cmbProvider.Name = "cmbProvider";
+            this.cmbProvider.Size = new System.Drawing.Size(187, 21);
+            this.cmbProvider.TabIndex = 16;
             // 
             // label7
             // 
@@ -166,76 +175,81 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Цена";
             // 
-            // textBox1
+            // tbPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(286, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(78, 20);
-            this.textBox1.TabIndex = 20;
+            this.tbPrice.Location = new System.Drawing.Point(286, 114);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(78, 20);
+            this.tbPrice.TabIndex = 20;
             // 
-            // comboBox3
+            // cmdColor
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(147, 115);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 22;
+            this.cmdColor.FormattingEnabled = true;
+            this.cmdColor.Location = new System.Drawing.Point(147, 115);
+            this.cmdColor.Name = "cmdColor";
+            this.cmdColor.Size = new System.Drawing.Size(121, 21);
+            this.cmdColor.TabIndex = 22;
+            this.cmdColor.SelectedIndexChanged += new System.EventHandler(this.cmdColor_SelectedIndexChanged);
             // 
-            // panel1
+            // pictureColor
             // 
-            this.panel1.Location = new System.Drawing.Point(147, 143);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 55);
-            this.panel1.TabIndex = 23;
+            this.pictureColor.Location = new System.Drawing.Point(147, 148);
+            this.pictureColor.Name = "pictureColor";
+            this.pictureColor.Size = new System.Drawing.Size(121, 50);
+            this.pictureColor.TabIndex = 0;
+            this.pictureColor.TabStop = false;
             // 
             // AddGood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 256);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.pictureColor);
+            this.Controls.Add(this.cmdColor);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbProvider);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.numericQuant);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbBarCode);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbCategories);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbMaterialName);
+            this.MaximizeBox = false;
             this.Name = "AddGood";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавить материал";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddGood_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericQuant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbMaterialName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbCategories;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbBarCode;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown numericQuant;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbProvider;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.ComboBox cmdColor;
+        private System.Windows.Forms.PictureBox pictureColor;
     }
 }

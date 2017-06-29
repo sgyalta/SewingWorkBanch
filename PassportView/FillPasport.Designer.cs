@@ -175,7 +175,9 @@
             this.Controls.Add(this.dtpExpiress);
             this.Controls.Add(this.tbNumberOrder);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
             this.Name = "FillPasport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FillPasport";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FillPasport_FormClosed);
             this.EnabledChanged += new System.EventHandler(this.FillPasport_EnabledChanged);

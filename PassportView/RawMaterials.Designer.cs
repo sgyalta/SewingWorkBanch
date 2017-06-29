@@ -38,6 +38,7 @@
             this.btnAddMaterials = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtvRawMaterial)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.dtvRawMaterial.ReadOnly = true;
             this.dtvRawMaterial.Size = new System.Drawing.Size(743, 311);
             this.dtvRawMaterial.TabIndex = 0;
+            this.dtvRawMaterial.DoubleClick += new System.EventHandler(this.dtvRawMaterial_DoubleClick);
             // 
             // textBox1
             // 
@@ -103,7 +105,7 @@
             // 
             // btnAddMaterials
             // 
-            this.btnAddMaterials.Location = new System.Drawing.Point(206, 383);
+            this.btnAddMaterials.Location = new System.Drawing.Point(196, 424);
             this.btnAddMaterials.Name = "btnAddMaterials";
             this.btnAddMaterials.Size = new System.Drawing.Size(140, 41);
             this.btnAddMaterials.TabIndex = 7;
@@ -113,12 +115,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(426, 383);
+            this.button2.Location = new System.Drawing.Point(406, 424);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 41);
             this.button2.TabIndex = 8;
             this.button2.Text = "Удалить ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -129,11 +132,20 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Список материалов:";
             // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Location = new System.Drawing.Point(12, 380);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 13);
+            this.labelError.TabIndex = 10;
+            // 
             // RawItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 436);
+            this.ClientSize = new System.Drawing.Size(770, 477);
+            this.Controls.Add(this.labelError);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAddMaterials);
@@ -144,7 +156,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dtvRawMaterial);
+            this.MaximizeBox = false;
             this.Name = "RawItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Склад материалов";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RawItem_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dtvRawMaterial)).EndInit();
@@ -165,6 +179,7 @@
         private System.Windows.Forms.Button btnAddMaterials;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelError;
     }
 }
 
